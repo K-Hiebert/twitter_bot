@@ -4,10 +4,10 @@ from connect_four import Game, RED, BLACK
 from ai import Ai
 import time
 
-CONSUMER_KEY = "TrMvCk3uT4lZPqUZmOFy5cjxE"
-CONSUMER_SECRET = "UVDTaf6wWkKxM0aQCeeinAZkDRTlyBrqwv54x28uukXBSVTOjm"
-ACCESS_TOKEN = "1345971965048176640-Gfu4L7dC15locdBKtANFvz6kzKuFGP"
-ACCESS_TOKEN_SECRET = "FTRuSrZEltqF6aPlYGVNqE4klsvGBQauZ6VQ1W1lQuWiC"
+CONSUMER_KEY = ##############
+CONSUMER_SECRET = #############
+ACCESS_TOKEN = ##############
+ACCESS_TOKEN_SECRET = ##############
 
 # Authentication
 auth = tweepy.OAuthHandler(CONSUMER_KEY, CONSUMER_SECRET)
