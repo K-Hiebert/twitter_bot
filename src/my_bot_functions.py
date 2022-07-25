@@ -40,30 +40,16 @@ def start_new_game(tweet):
     return text == 'new' or text == 'New'
 
 
-# most difficult bug of detecting string duplicates.
 def tweet(api, tweet):
     try:
         api.update_status(tweet)
     except tweepy.TweepError as e:
-        # for past_tweet in api.user_timeline(tweet_mode = 'extended'):
-        #     if (set(past_tweet.full_text.split(' ')) == set(tweet.split(' '))):
-        #         api.destroy_status(past_tweet.id)
         for status in tweepy.Cursor(api.user_timeline).items():
             try:
                 api.destroy_status(status.id)
             except:
                 pass
         api.update_status(tweet)
-
-
-# def tweet_reply(api, tweet):
-#     try:
-#         api.update_status(tweet)
-#     except tweepy.TweepError as e:
-#         for past_tweet in api.user_timeline(tweet_mode = 'extended'):
-#             if (set(past_tweet.full_text.split(' ')) == set(tweet.split(' '))):
-#                 api.destroy_status(past_tweet.id)
-#         api.update_status(tweet)
 
 
 def get_start_board():

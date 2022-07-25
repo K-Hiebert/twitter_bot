@@ -134,6 +134,7 @@ class Ai:
     def make_best_move(self):
         self.game.make_move(self.pick_best_move(BLACK))
 
+# For testing
 def main():
     g = Game()
     a = Ai(g)
